@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author mmcka
+ * @author Zeina Mint
  */
 public class AgeCalculatorServlet extends HttpServlet {
 
@@ -37,7 +37,7 @@ public class AgeCalculatorServlet extends HttpServlet {
         if (input == null || input.equals(""))
         {
             //error message
-             request.setAttribute("errorMessage", "You must give your current age");
+             request.setAttribute("message", "You must give your current age");
             
         }  
         else 
@@ -46,7 +46,7 @@ public class AgeCalculatorServlet extends HttpServlet {
             int nextAge = Integer.valueOf(input) + 1;
         
             //display age
-            request.setAttribute("calculateAge", "Your age next birthday will be " + nextAge);
+            request.setAttribute("message", "Your age next birthday will be " + nextAge);
         }
             
        getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").forward(request, response); 
