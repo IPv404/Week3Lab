@@ -48,21 +48,23 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
            request.setAttribute("result", "Invalid");
         }
         else{
-            
+            int x = Integer.valueOf(input1);
+            int y = Integer.valueOf(input2);
+            double result;
             if(arithmetic.equals("+")){
-                double result = Double.valueOf(input1) + Double.valueOf(input2);
+                result = x + y;
                 request.setAttribute("result", result);
                 }
             else if(arithmetic.equals("*")){
-                double result = Double.valueOf(input1) * Double.valueOf(input2);
+                result = x * y;
                 request.setAttribute("result", result);
                 }
             else if(arithmetic.equals("%")){
-                double result = (Double.valueOf(input1))/(Double.valueOf(input2));
+                result = x / y;
                 request.setAttribute("result", result);
                 }
             else if(arithmetic.equals("-")){
-                double result = Double.valueOf(input1) - Double.valueOf(input2);
+                result = x - y;
                 request.setAttribute("result", result);
                 }
         }

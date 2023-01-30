@@ -21,7 +21,7 @@
             <input type="submit" value="+" name="submit" >
             <input type="submit" value="-" name="submit" >
             <input type="submit" value="*" name="submit">
-            <input type="submit" value="/" name="submit" >
+            <input type="submit" value="%" name="submit" >
             
         </form>
             
